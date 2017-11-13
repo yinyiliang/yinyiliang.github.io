@@ -10,9 +10,10 @@
 	<link rel="stylesheet" href="css/normalize.css">
 	<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
 	<link href="css/ohmygod.css" rel="stylesheet" type="text/css"/>
+	<link href="css/reset.css" type="text/css" rel="stylesheet">
 
 
-	<style>
+	<style type="text/css">
 		/* NOTE: The styles were added inline because Prefixfree needs access to your styles and they must be inlined if they are on local disk! */
 		html {
 			height: 100%;
@@ -100,6 +101,96 @@
 			}
 		}
 
+
+		body
+		{
+			font-family: "微软雅黑";
+		}
+
+		#gallery
+		{
+			width: 700px;
+			position: relative;
+			margin: 20px auto 0;
+			background-color: #00000000;
+			min-height: 400px;
+			padding: 20px;
+		}
+
+		/*标题*/
+		#gallery h1
+		{
+			color: #fff;
+			font-size: 2em;
+			font-weight: bold;
+		}
+
+		#gallery ul
+		{
+			width: 140px;
+			float: right;
+			margin: 10px 0 20px;
+		}
+
+		#gallery ul li
+		{
+			float: left;
+			margin: 0px 8px 0 0;
+		}
+
+		#gallery ul li span
+		{
+			display: block;
+			width: 60px;
+			height: 80px;
+			border: 1px solid #fff;
+			-moz-border-radius: 4px;
+			-webkit-border-radius: 4px;
+			-ms-border-radius: 4px;
+			-o-border-radius: 4px;
+			border-radius: 4px;
+			overflow: hidden;
+		}
+
+		#gallery  ul li span img
+		{
+			position: relative;
+			top: -200px;
+			left: -100px;
+			filter: alpha(opacity=30);
+			opacity: 0.3;
+		}
+
+		#gallery ul li span.touch img, #gallery ul li:hover span img
+		{
+			opacity: 1;
+			filter: alpha(opacity=100);
+		}
+
+		#gallery ul li:hover div
+		{
+			display: block;
+		}
+
+		#gallery ul li div  img
+		{
+			width: 460px;
+		}
+
+		#gallery ul li div
+		{
+			display: none;
+			position: absolute;
+			top: 30px;
+			left: 30px;
+			border: 5px solid #fff;
+		}
+
+		.clearfix
+		{
+			clear: both;
+		}
+
 	</style>
 
 
@@ -112,59 +203,52 @@
 <div id='stars'></div>
 <div id='stars2'></div>
 <div id='stars3'></div>
-	<div class="container">
-		<div class="row">
-			<div class="col-xs-4 col-md-4">
-				<a href="https://yinyiliang.github.io" class="thumbnail">
-					<img src="img/1.jpg" alt="...">
-				</a>
+<div id="gallery">
+	<ul>
+		<li>
+			<span class="touch"><img src="img/yao_1.jpg"/></span>
+
+			<div style="display: block;">
+				<img src="img/yao_1.jpg"/>
 			</div>
-			<div class="col-xs-4 col-md-4">
-				<a href="https://yinyiliang.github.io" class="thumbnail">
-					<img src="img/2.jpg" alt="...">
-				</a>
+		</li>
+
+		<li>
+			<span><img src="img/yao_2.jpg"/></span>
+
+			<div>
+				<img src="img/yao_2.jpg"/>
 			</div>
-			<div class="col-xs-4 col-md-4">
-				<a href="https://yinyiliang.github.io" class="thumbnail">
-					<img src="img/3.jpg" alt="...">
-				</a>
+		</li>
+		<li>
+			<span><img src="img/yao_3.jpg"/></span>
+
+			<div>
+				<img src="img/yao_3.jpg"/>
 			</div>
-		</div>
-		<div class="row">
-			<div class="col-xs-4 col-md-4">
-				<a href="https://yinyiliang.github.io" class="thumbnail">
-					<img src="img/4.jpg" alt="...">
-				</a>
+		</li>
+
+		<li>
+			<span><img src="img/yao_4.jpg"/></span>
+
+			<div>
+				<img src="img/yao_4.jpg"/>
 			</div>
-			<div class="col-xs-4 col-md-4">
-				<a href="https://yinyiliang.github.io" class="thumbnail">
-					<img src="img/5.jpg" alt="...">
-				</a>
+		</li>
+
+		<li>
+			<span><img src="img/yao_5.jpg"/></span>
+
+			<div>
+				<img src="img/yao_5.jpg"/>
 			</div>
-			<div class="col-xs-4 col-md-4">
-				<a href="https://yinyiliang.github.io" class="thumbnail">
-					<img src="img/6.jpg" alt="...">
-				</a>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-xs-4 col-md-4">
-				<a href="https://yinyiliang.github.io" class="thumbnail">
-					<img src="img/7.jpg" alt="...">
-				</a>
-			</div>
-			<div class="col-xs-4 col-md-4">
-				<a href="https://yinyiliang.github.io" class="thumbnail">
-					<img src="img/8.jpg" alt="...">
-				</a>
-			</div>
-			<div class="col-xs-4 col-md-4">
-				<a href="https://yinyiliang.github.io" class="thumbnail">
-					<img src="img/9.jpg" alt="...">
-				</a>
-			</div>
-		</div>
-	</div>
+		</li>
+
+
+	</ul>
+
+	<div class="clearfix"></div>
+</div>
 
 </body>
 </html>
